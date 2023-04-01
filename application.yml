@@ -1,0 +1,4 @@
+apps:
+  global:
+    configa: Configuracion A
+    configb: Configuracion B
