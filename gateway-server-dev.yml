@@ -1,0 +1,2 @@
+gateway:
+  config: http://host:8080
