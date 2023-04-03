@@ -1,2 +1,14 @@
 gateway:
   config: http://host:8080
+
+spring:
+  cloud:
+    discovery:
+      locator:
+        enabled: true
+    routes:
+      - id: customers
+        uri: lb://customers
+        predicates:
+          - Path=/customers/**
+      
