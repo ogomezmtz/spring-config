@@ -1,14 +1,17 @@
-gateway:
-  config: http://host:8080
-
+server:
+  port: 8765
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 spring:
   cloud:
-    discovery:
-      locator:
-        enabled: true
-    routes:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
       - id: customers
         uri: lb://customers
         predicates:
           - Path=/customers/**
-      
