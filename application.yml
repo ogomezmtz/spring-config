@@ -2,3 +2,6 @@ apps:
   global:
     configa: Configuracion A
     configb: Configuracion B
+eureka:
+  instance:
+    hostname: localhost
